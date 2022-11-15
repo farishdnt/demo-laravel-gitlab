@@ -18,7 +18,7 @@ Route::get('/', function () {
     try {
         DB::connection()->getPdo();
         if(DB::connection()->getDatabaseName()){
-            echo "Congratulations! You are connected to the DB: " . DB::connection()->getDatabaseName();
+            echo "Congratulations! You are connected to the DB:" . DB::connection()->getDatabaseName();
             echo env('DB_PORT');
         }else{
             die("Could not find the database. Please check your configuration.");
