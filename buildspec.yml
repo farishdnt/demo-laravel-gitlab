@@ -1,0 +1,10 @@
+version: 0.2
+phases:
+  build:
+    commands:
+      - echo Build started on `date`
+  post_build:
+    commands:
+       - printf "[{\"name\":\"demo-laravel\"}]" > imagedefinitions.json
+artifacts:
+  files: imagedefinitions.json
